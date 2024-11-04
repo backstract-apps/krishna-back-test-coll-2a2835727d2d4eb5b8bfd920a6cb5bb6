@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: krishna-back-test-coll-2a2835727d2d4eb5b8bfd920a6cb5bb6-depl
+  labels:
+    app: krishna-back-test-coll-2a2835727d2d4eb5b8bfd920a6cb5bb6
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: krishna-back-test-coll-2a2835727d2d4eb5b8bfd920a6cb5bb6
+  template:
+    metadata:
+      labels:
+        app: krishna-back-test-coll-2a2835727d2d4eb5b8bfd920a6cb5bb6
+    spec:
+      containers:
+        - name: krishna-back-test-coll-2a2835727d2d4eb5b8bfd920a6cb5bb6
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:krishna-back-test-coll-2a2835727d2d4eb5b8bfd920a6cb5bb6
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9013
